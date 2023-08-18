@@ -40,11 +40,11 @@ nand flash 用于存放内核 kernel，根文件系统 rootfs（ubifs）。
 uboot 中集成了相关烧写指令，可通过 tftp 下载文件并进行烧写。将指定名称的文件放入 tftpboot 文件夹下，即可执行下面命令进行烧写。
 
 ```
-    run updateos_nand						// 烧写 kernel.bin 到 kernel_nand 分区
-    run updateubifs_boot 					// 烧写 ubifs.img  到 ubifs_nand  分区
-    setenv bootcmd run bootcmd_ubifs_boot	// 设置启动命令
-    saveenv									// 保存环境变量
-    boot									// 启动 linux
+    run updateos_nand                      // 烧写 kernel.bin 到 kernel_nand 分区
+    run updateubifs_boot                   // 烧写 ubifs.img  到 ubifs_nand  分区
+    setenv bootcmd run bootcmd_ubifs_boot  // 设置启动命令
+    saveenv                                // 保存环境变量
+    boot                                   // 启动 linux
 ```
 
 nand flash (128M) 在 uboot 下分区如下：
